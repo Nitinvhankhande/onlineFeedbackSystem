@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Importing Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+        /* General Page Styling */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #eef2f3;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: #1d3557;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* New Animated Registration Text */
+        .navbar span {
+            display: inline-block;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: zoomIn 0.6s forwards ease-in-out;
+        }
+
+        /* Assigning unique animation delays */
+        .navbar span:nth-child(1) { animation-delay: 0.1s; }
+        .navbar span:nth-child(2) { animation-delay: 0.2s; }
+        .navbar span:nth-child(3) { animation-delay: 0.3s; }
+        .navbar span:nth-child(4) { animation-delay: 0.4s; }
+        .navbar span:nth-child(5) { animation-delay: 0.5s; }
+        .navbar span:nth-child(6) { animation-delay: 0.6s; }
+        .navbar span:nth-child(7) { animation-delay: 0.7s; }
+        .navbar span:nth-child(8) { animation-delay: 0.8s; }
+        .navbar span:nth-child(9) { animation-delay: 0.9s; }
+        .navbar span:nth-child(10) { animation-delay: 1s; }
+        .navbar span:nth-child(11) { animation-delay: 1.1s; }
+        .navbar span:nth-child(12) { animation-delay: 1.2s; }
+        .navbar span:nth-child(13) { animation-delay: 1.3s; }
+        .navbar span:nth-child(14) { animation-delay: 1.4s; }
+        .navbar span:nth-child(15) { animation-delay: 1.5s; }
+        .navbar span:nth-child(16) { animation-delay: 1.6s; }
+
+        /* New Zoom-In Animation */
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Form Container */
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+            width: 380px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Labels */
+        label {
+            font-weight: 400;
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Input Fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: border 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Submit Button */
+        input[type="submit"] {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+            font-weight: 600;
+        }
+
+        input[type="submit"]:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 400px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar with New Animated "Registration Form" Text -->
+    <div class="navbar">
+        <span>R</span><span>e</span><span>g</span><span>i</span><span>s</span><span>t</span><span>r</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span> <span>F</span><span>o</span><span>r</span><span>m</span>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="container">
+        <form action="registerUser" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

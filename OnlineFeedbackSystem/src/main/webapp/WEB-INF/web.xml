@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+    
+     <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/adminLogin</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet Mapping for User Registration -->
+    <servlet>
+        <servlet-name>UserRegisterServlet</servlet-name>
+        <servlet-class>UserRegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserRegisterServlet</servlet-name>
+        <url-pattern>/registerUser</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet Mapping for Feedback -->
+    <servlet>
+        <servlet-name>FeedbackServlet</servlet-name>
+        <servlet-class>FeedbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FeedbackServlet</servlet-name>
+        <url-pattern>/submitFeedback</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+        <servlet-name>userLoginServlet</servlet-name>
+        <servlet-class>userLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userLoginServlet</servlet-name>
+        <url-pattern>/userRegister</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome File List -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
